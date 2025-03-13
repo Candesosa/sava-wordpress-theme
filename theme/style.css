@@ -1,0 +1,185 @@
+/*
+Theme Name: SAVA
+Theme URI: https://savacafe.com
+Author: SAVA Team
+Author URI: https://savacafe.com
+Description: Tema personalizado para SAVA Café de Especialidad
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sava
+Requires at least: WordPress 5.0
+Requires PHP: 7.4
+*/
+
+/* Importar fuentes */
+@import url('https://fonts.cdnfonts.com/css/axiforma');
+
+/* Variables globales */
+:root {
+  --primary: #60422a;
+  --primary-foreground: #F3eddd;
+  --secondary: #bc8f44;
+  --secondary-foreground: #ae7d3a;
+  --background: #F3eddd;
+  --text: #60422a;
+  --border: #60422a;
+  --radius: 0.75rem;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Axiforma', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 700;
+}
+
+h4, h5, h6 {
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 500;
+}
+
+p, span, a {
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 400;
+}
+
+/* Patrones de fondo */
+.hero-pattern {
+  background-color: var(--primary-foreground);
+  background-image: radial-gradient(var(--primary) 0.5px, transparent 0.5px), 
+                    radial-gradient(var(--primary) 0.5px, var(--primary-foreground) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.coffee-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.section-pattern {
+  background-color: var(--primary-foreground);
+  opacity: 0.8;
+  background-image: linear-gradient(var(--primary) 1px, transparent 1px), 
+                    linear-gradient(to right, var(--primary) 1px, var(--primary-foreground) 1px);
+  background-size: 40px 40px;
+}
+
+/* Contenedores */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-foreground);
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(243, 237, 221, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.site-logo {
+  height: 48px;
+  width: auto;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 4rem 0;
+}
+
+/* WooCommerce personalización */
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  background-color: var(--secondary);
+  color: white;
+  border-radius: var(--radius);
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 500;
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+  background-color: var(--secondary-foreground);
+  color: white;
+}
+
+/* Elementor personalización */
+.elementor-widget-button .elementor-button {
+  background-color: var(--secondary);
+  font-family: 'Axiforma', sans-serif;
+  border-radius: var(--radius);
+}
+
+.elementor-widget-button .elementor-button:hover {
+  background-color: var(--secondary-foreground);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .site-header .container {
+    height: 64px;
+  }
+  
+  .site-logo {
+    height: 36px;
+  }
+}
