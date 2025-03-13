@@ -56,7 +56,6 @@ p, span, a {
   font-family: 'Axiforma', sans-serif;
   font-weight: 400;
 }
-
 /* Patrones de fondo */
 .hero-pattern {
   background-color: var(--primary-foreground);
@@ -130,7 +129,6 @@ p, span, a {
   height: 48px;
   width: auto;
 }
-
 /* Footer */
 .site-footer {
   background-color: var(--primary);
